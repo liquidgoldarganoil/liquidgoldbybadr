@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(201, 162, 75, 0.35);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #07060a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#8a6d2f, #e8c873);
+  border-radius: 10px;
+}
+
+/* Visible keyboard focus, respected everywhere */
+:focus-visible {
+  outline: 1px solid #e8c873;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Moroccan zellige-inspired geometric line pattern, used as a subtle backdrop */
+.pattern-zellige {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23c9a24b' stroke-width='0.6' stroke-opacity='0.35'%3E%3Cpath d='M60 0L120 60L60 120L0 60Z'/%3E%3Cpath d='M60 20L100 60L60 100L20 60Z'/%3E%3Ccircle cx='60' cy='60' r='14'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+
+.pattern-fade-mask {
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+}
+
+/* Gold shimmer text / border sweep */
+.text-shimmer {
+  background: linear-gradient(110deg, #8a6d2f 20%, #f8e9c1 40%, #e8c873 50%, #8a6d2f 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+.card-glass {
+  background: linear-gradient(180deg, rgba(18, 16, 23, 0.7), rgba(7, 6, 10, 0.85));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(201, 162, 75, 0.14);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 0 1px rgba(201, 162, 75, 0.25), 0 20px 60px -20px rgba(201, 162, 75, 0.25);
+}
