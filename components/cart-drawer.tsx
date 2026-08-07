@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Minus, Plus, X, ShoppingBag } from "lucide-react";
 import { useCart } from "./cart-context";
 import { Button } from "./ui/button";
+import { buildShopifyCheckoutUrl } from "@/lib/shopify";
 
 export function CartDrawer() {
   const { items, subtotal, isOpen, close, updateQty, remove } = useCart();
@@ -122,7 +123,13 @@ export function CartDrawer() {
                   <p className="mt-1 text-xs text-ivory/35">
                     Shipping and taxes calculated at checkout.
                   </p>
-                  <Button size="lg" className="mt-5 w-full">
+                  <Button
+                    size="lg"
+                    className="mt-5 w-full"
+                    onClick={() => {
+                      window.location.href = buildShopifyCheckoutUrl(items);
+                    }}
+                  >
                     Checkout
                   </Button>
                 </div>
