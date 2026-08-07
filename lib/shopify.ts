@@ -1,4 +1,4 @@
-import type { CartItem } from "./cart-context";
+import type { CartItem } from "@/components/cart-context";
 
 // Your Shopify store's .myshopify.com domain — update this if the store
 // handle ever changes.
