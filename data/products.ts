@@ -11,6 +11,7 @@ export type Product = {
   rating: number;
   reviews: number;
   stock: number;
+  shopifyVariantId: string;
 };
 
 export const products: Product[] = [
@@ -28,6 +29,7 @@ export const products: Product[] = [
     rating: 5,
     reviews: 128,
     stock: 6,
+    shopifyVariantId: "58064278225227",
   },
   {
     slug: "rose-argan",
@@ -43,6 +45,7 @@ export const products: Product[] = [
     rating: 5,
     reviews: 94,
     stock: 4,
+    shopifyVariantId: "58064624124235",
   },
   {
     slug: "tea-tree-argan",
@@ -58,6 +61,7 @@ export const products: Product[] = [
     rating: 5,
     reviews: 76,
     stock: 9,
+    shopifyVariantId: "58064645423435",
   },
   {
     slug: "argan-oud",
@@ -73,6 +77,7 @@ export const products: Product[] = [
     rating: 5,
     reviews: 61,
     stock: 3,
+    shopifyVariantId: "58064917692747",
   },
   {
     slug: "luxury-gift-box",
@@ -88,5 +93,6 @@ export const products: Product[] = [
     rating: 5,
     reviews: 43,
     stock: 5,
+    shopifyVariantId: "58064959897931",
   },
 ];
